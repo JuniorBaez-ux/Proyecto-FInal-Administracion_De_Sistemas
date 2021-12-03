@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto_FInal_Administracion_De_Sistemas.UI.Consultas;
+using Proyecto_FInal_Administracion_De_Sistemas.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,41 @@ namespace Proyecto_FInal_Administracion_De_Sistemas
     /// </summary>
     public partial class MainWindow : Window
     {
+        internal static object user;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rClientes clientes = new rClientes();
+            clientes.Show();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            rCondominios condominios = new rCondominios();
+            condominios.Show();
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            cClientes clientesc = new cClientes();
+            clientesc.Show();
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            cCondominios condominiosc = new cCondominios();
+            condominiosc.Show();
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            rRecibos recibos = new rRecibos();
+            recibos.Show();
         }
     }
 }

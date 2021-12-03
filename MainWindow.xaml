@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Menu>
+            <MenuItem Header="Registros">
+                <MenuItem Header="Registro de clientes" Click="MenuItem_Click"/>
+                <MenuItem Header="Registro de condominios" Click="MenuItem_Click_1"/>
+                <MenuItem Header="Registro de recibos" Click="MenuItem_Click_4"/>
+            </MenuItem>
+            <MenuItem Header="Consultas">
+                <MenuItem Header="Consulta de clientes" Click="MenuItem_Click_2"/>
+                <MenuItem Header="Consulta de condominios" Click="MenuItem_Click_3"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>

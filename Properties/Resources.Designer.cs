@@ -93,9 +93,9 @@ namespace Proyecto_FInal_Administracion_De_Sistemas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Eliminar {
+        internal static byte[] Eliminar2 {
             get {
-                object obj = ResourceManager.GetObject("Eliminar", resourceCulture);
+                object obj = ResourceManager.GetObject("Eliminar2", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Proyecto_FInal_Administracion_De_Sistemas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Guardar {
+        internal static byte[] Guardar2 {
             get {
-                object obj = ResourceManager.GetObject("Guardar", resourceCulture);
+                object obj = ResourceManager.GetObject("Guardar2", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -113,9 +113,19 @@ namespace Proyecto_FInal_Administracion_De_Sistemas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Nuevo {
+        internal static byte[] inmobiliaria {
             get {
-                object obj = ResourceManager.GetObject("Nuevo", resourceCulture);
+                object obj = ResourceManager.GetObject("inmobiliaria", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Nuevo2 {
+            get {
+                object obj = ResourceManager.GetObject("Nuevo2", resourceCulture);
                 return ((byte[])(obj));
             }
         }
