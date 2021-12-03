@@ -33,11 +33,6 @@ namespace Proyecto_FInal_Administracion_De_Sistemas.UI.Registros
             LLenarComboParqueo();
         }
 
-        private void BuscarIDButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -45,19 +40,21 @@ namespace Proyecto_FInal_Administracion_De_Sistemas.UI.Registros
 
         private void GenerarButton_Click(object sender, RoutedEventArgs e)
         {
-            string empresa = NombreTextBox.Text;
-            string[] direccion = { DireccionTextBox.Text };
-            string cliente = ClienteComboBox.SelectedValue.ToString();
-            string []direccionCliente = { DireccionComboBox.SelectedValue.ToString() };
+            string[] empresa = {NombreTextBox.Text};
+            string direccion =  DireccionTextBox.Text ;
+            string[] cliente = {ClienteComboBox.SelectedValue.ToString()};
+            string direccionCliente =  DireccionComboBox.SelectedValue.ToString() ;
             decimal precioApartamento = ApartamentoComboBox.SelectedValue.ToString().ToDecimal();
             decimal precioParqueo = ParqueoComboBox.SelectedValue.ToString().ToDecimal(); ;
             decimal precioTotal = precioApartamento + precioParqueo;
-        new InvoicerApi(SizeOption.A4, OrientationOption.Landscape, "DOP")
-        .TextColor("#CC0000")
-        .BackColor("#FFD6CC")
+            new InvoicerApi(SizeOption.A4, OrientationOption.Landscape, "DOP")
+            .TextColor("#CC0000")
+            .BackColor("#FFD6CC")
+            .Title("Recibo de Pago")
+            .DueDate(DateTime.Now.AddMonths(1))
         .Image(@"C:\Users\USER\source\repos\Proyecto-FInal-Administracion_De_Sistemas\Resources\inmobiliaria.png", 125, 27)
-        .Company(Address.Make("De", direccion, empresa))
-        .Client(Address.Make("Para", direccionCliente, cliente))
+        .Company(Address.Make("De", empresa, empresa[0].ToString(), "0.00"))
+        .Client(Address.Make("Para", cliente, direccionCliente, "0.00"))
         .Items(new List<ItemRow> {
             ItemRow.Make("Pago de Apartamento", "Apartamento 1", (decimal)1, 0, precioApartamento, precioApartamento),
             ItemRow.Make("Pago de Parqueo", "Parqueo 1", (decimal)1, 0, precioParqueo, precioParqueo),
