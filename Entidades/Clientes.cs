@@ -13,16 +13,13 @@ namespace Proyecto_FInal_Administracion_De_Sistemas.Entidades
         [Key]
         public int ClienteId { get; set; }
         public string Nombres { get; set; }
+        public string Cedula { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
-        public int Cedula { get; set; }
+        public string Referencia { get; set; }
 
-        [ForeignKey("NegocioId")]
-        public virtual Negocios Negocios { get; set; }
-
-        public Clientes()
-        {
-            Cedula = 0;
-        }
+        [ForeignKey("CondominioId")]
+        public int CondominioId { get; set; }
+        public virtual Condominios Condominios { get; set; }
     }
 }
